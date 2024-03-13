@@ -4,7 +4,7 @@ interface Props {
 }
 
 import AsideMenu from "../components/AsideMenu.astro";
-
+import { ViewTransitions } from "astro:transitions";
 const { title } = Astro.props;
 ---
 
@@ -17,6 +17,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions fallback="none" />
   </head>
   <body>
     <div class="relative h-screen p-2 gap-2" id="app">
